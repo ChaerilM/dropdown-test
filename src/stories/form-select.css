@@ -1,0 +1,39 @@
+.form-select--outlined {
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+.form-select--outlined:focus {
+    border-color: #007bff;
+}
+
+.form-select--outlined:disabled {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    color: #6c757d;
+}
+
+.form-select--outlined:disabled:focus {
+    border-color: #f8f9fa;
+}
+
+.form-select {
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.form-select:disabled {
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+    color: #6c757d;
+}
+
+.form-select:disabled:focus {
+    border-color: #f8f9fa;
+}
