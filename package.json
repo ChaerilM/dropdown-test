@@ -4,7 +4,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "chromatic": "chromatic --project-token=chpt_11be018517e44bc",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
