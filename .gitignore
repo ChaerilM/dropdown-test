@@ -167,3 +167,5 @@ storybook-static/
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/storybookjs,node,visualstudiocode
+
+*storybook.log

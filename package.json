@@ -1,0 +1,37 @@
+{
+  "name": "search-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "chromatic": "chromatic --project-token=chpt_11be018517e44bc",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "init-msw": "msw init public/",
+    "test-storybook": "test-storybook"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.6.1",
+    "@storybook/addon-essentials": "^8.2.6",
+    "@storybook/addon-interactions": "^8.2.6",
+    "@storybook/addon-links": "^8.2.6",
+    "@storybook/blocks": "^8.2.6",
+    "@storybook/html": "^8.2.6",
+    "@storybook/html-vite": "^8.2.6",
+    "@storybook/test": "^8.2.6",
+    "autoprefixer": "^10.4.19",
+    "chromatic": "^11.5.6",
+    "postcss": "^8.4.40",
+    "storybook": "^8.2.6",
+    "tailwindcss": "^3.4.7"
+  },
+  "dependencies": {
+    "typeahead-standalone": "^5.3.0"
+  }
+}
