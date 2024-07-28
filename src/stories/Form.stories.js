@@ -24,10 +24,16 @@ export default {
 export const SelectDropdownField = {
     args: {
         id: 'select',
+        withSearch: true,
         options: [
             { value: '1', text: 'Option 1' },
             { value: '2', text: 'Option 2' },
             { value: '3', text: 'Option 3' },
+            { value: '4', text: 'Long Long Option 4' },
+            { value: '5', text: 'Long Long Long Option 5' },
+            { value: '6', text: 'Long Long Long Long Option 6' },
         ],
+        multiple: false,
+        outlined: true,
     },
 };
