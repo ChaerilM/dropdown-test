@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple = true }) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const searchInputRef = useRef(null);
     const [selected, setSelected] = useState([]);
     const [search, setSearch] = useState('');
     const [filteredOptions, setFilteredOptions] = useState(options);
@@ -29,6 +30,12 @@ const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple =
             options.filter(option => option.label.toLowerCase().includes(searchQuery))
         );
     }, [search, options]);
+
+    useEffect(() => {
+        if (isOpen && withSearch && searchInputRef.current) {
+            searchInputRef.current.focus();
+        }
+    }, [isOpen, withSearch]);
 
     const handleSelect = (option) => {
         if (multiple) {
@@ -88,6 +95,7 @@ const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple =
                             <FontAwesomeIcon icon={faMagnifyingGlass} className='text-gray-400 flex-shrink-0' />
                             <input
                                 type="text"
+                                ref={searchInputRef}
                                 className="w-full focus:outline-none p-1"
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
