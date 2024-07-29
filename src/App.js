@@ -1,6 +1,8 @@
 import React from 'react';
 import Dropdown from './Dropdown';
 import './tailwind.css';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   const options = [
@@ -26,6 +28,8 @@ function App() {
             <Dropdown options={options} />
           </div>
         </div>
+        <Analytics />
+        <SpeedInsights />
       </div>
     </div>
   );
