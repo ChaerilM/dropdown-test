@@ -4,7 +4,7 @@ import { faChevronDown, faMagnifyingGlass, faCircleXmark } from '@fortawesome/fr
 import { faCircleXmark as faRegCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import PropTypes from 'prop-types';
 
-const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple = true }) => {
+const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple = true, id = 'select' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
     const searchInputRef = useRef(null);
@@ -64,7 +64,7 @@ const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple =
     };
 
     return (
-        <div ref={dropdownRef} className={`dropdown ${outlined ? "border border-gray-300" : "bg-gray-200"} w-full min-h-[34px] flex items-center gap-2 px-2 py-1 rounded relative`} onClick={() => setIsOpen(!isOpen)}>
+        <div ref={dropdownRef} className={`dropdown ${outlined ? "border border-gray-300" : "bg-gray-200"} w-full min-h-[34px] flex items-center gap-2 px-2 py-1 rounded relative`} onClick={() => setIsOpen(!isOpen)} id={id}>
             <div
                 className="flex flex-wrap items-center gap-2 w-full cursor-pointer"
                 role="combobox"
