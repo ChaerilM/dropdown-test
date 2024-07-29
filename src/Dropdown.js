@@ -64,7 +64,7 @@ const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple =
     };
 
     return (
-        <div ref={dropdownRef} className={`dropdown ${outlined ? "border border-gray-300" : "bg-gray-200"} w-full min-h-[34px] flex items-center gap-2 px-2 py-1 rounded relative`} onClick={() => setIsOpen(!isOpen)} id={id}>
+        <div ref={dropdownRef} className={`dropdown ${outlined ? "border border-gray-300" : "bg-gray-200"} w-full min-h-8 flex items-center gap-2 px-2 py-1 rounded relative`} onClick={() => setIsOpen(!isOpen)} id={id}>
             <div
                 className="flex flex-wrap items-center gap-2 w-full cursor-pointer"
                 role="combobox"
@@ -128,7 +128,6 @@ const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple =
 };
 
 Dropdown.propTypes = {
-    
     options: PropTypes.array,
     withSearch: PropTypes.bool,
     outlined: PropTypes.bool,
