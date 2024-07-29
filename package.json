@@ -1,10 +1,16 @@
 {
   "name": "dropdown-test",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "keywords": ["dropdown", "react", "component", "search", "highlight"],
+  "keywords": [
+    "dropdown",
+    "react",
+    "component",
+    "search",
+    "highlight"
+  ],
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",

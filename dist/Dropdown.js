@@ -18,7 +18,8 @@ const Dropdown = _ref => {
     options = [],
     withSearch = true,
     outlined = true,
-    multiple = true
+    multiple = true,
+    id = 'select'
   } = _ref;
   const [isOpen, setIsOpen] = (0, _react.useState)(false);
   const dropdownRef = (0, _react.useRef)(null);
@@ -39,7 +40,7 @@ const Dropdown = _ref => {
   }, []);
   (0, _react.useEffect)(() => {
     const searchQuery = search.trim().toLowerCase();
-    setFilteredOptions(options.filter(option => option.label.toLowerCase().includes(searchQuery)));
+    setFilteredOptions(options.filter(option => option.label && option.label.toLowerCase().includes(searchQuery)));
   }, [search, options]);
   (0, _react.useEffect)(() => {
     if (isOpen && withSearch && searchInputRef.current) {
@@ -67,8 +68,9 @@ const Dropdown = _ref => {
   };
   return /*#__PURE__*/_react.default.createElement("div", {
     ref: dropdownRef,
-    className: "dropdown ".concat(outlined ? "border border-gray-300" : "bg-gray-200", " w-full min-h-[34px] flex items-center gap-2 px-2 py-1 rounded relative"),
-    onClick: () => setIsOpen(!isOpen)
+    className: "dropdown ".concat(outlined ? "border border-gray-300" : "bg-gray-200", " w-full min-h-8 flex items-center gap-2 px-2 py-1 rounded relative"),
+    onClick: () => setIsOpen(!isOpen),
+    id: id
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "flex flex-wrap items-center gap-2 w-full cursor-pointer",
     role: "combobox",
