@@ -52,7 +52,7 @@ const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple =
     const highlightText = (text, highlight) => {
         const parts = text.split(new RegExp(`(${highlight})`, 'gi'));
         return parts.map((part, index) =>
-            part.toLowerCase() === highlight.toLowerCase() ? <span key={index} className="bg-green-400">{part}</span> : part
+            part.toLowerCase() === highlight.toLowerCase() ? <span key={index} className="bg-cyan-400">{part}</span> : part
         );
     };
 
@@ -103,7 +103,7 @@ const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple =
                         {filteredOptions.map(option => (
                             <div
                                 key={option.value}
-                                className={`p-2 cursor-pointer ${isSelected(option.value) ? 'bg-green-200' : 'hover:bg-gray-100'}`}
+                                className={`p-2 cursor-pointer ${isSelected(option.value) ? 'bg-cyan-100' : 'hover:bg-gray-100'}`}
                                 onClick={() => handleSelect(option)}
                                 role="option"
                                 aria-selected={isSelected(option.value)}
