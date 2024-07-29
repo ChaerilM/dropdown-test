@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "keywords": ["dropdown", "react", "component", "search", "highlight"],
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
