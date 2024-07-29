@@ -89,7 +89,7 @@ const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple =
                 )}
             </div>
             {isOpen && (
-                <div className="absolute w-full bottom-0 left-0 transform translate-y-full text-sm bg-white border rounded" id="dropdown-listbox" role="listbox">
+                <div className="absolute w-full -bottom-3 left-0 transform translate-y-full text-sm bg-white border rounded" id="dropdown-listbox" role="listbox">
                     {withSearch && (
                         <div className="w-full border-b flex items-center gap-2 relative px-2 py-1" onClick={(e) => e.stopPropagation()}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} className='text-gray-400 flex-shrink-0' />
