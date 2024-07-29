@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faMagnifyingGlass, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { faCircleXmark as faRegCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import PropTypes from 'prop-types';
 
@@ -95,7 +95,7 @@ const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple =
                                 aria-controls="dropdown-listbox"
                             />
                             {search.trim() !== '' && (
-                                <FontAwesomeIcon icon={faRegCircleXmark} className='text-gray-400 hover:text-gray-700 cursor-pointer' onClick={(e) => { e.stopPropagation(); setSearch(''); }} />
+                                <FontAwesomeIcon icon={faCircleXmark} className='text-gray-400 hover:text-gray-700 cursor-pointer' onClick={(e) => { e.stopPropagation(); setSearch(''); }} />
                             )}
                         </div>
                     )}
