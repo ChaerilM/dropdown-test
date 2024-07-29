@@ -105,7 +105,7 @@ const Dropdown = _ref => {
       setSelected([]);
     }
   }))), isOpen && /*#__PURE__*/_react.default.createElement("div", {
-    className: "absolute w-full bottom-0 left-0 transform translate-y-full text-sm bg-white border rounded",
+    className: "absolute w-full -bottom-3 left-0 transform translate-y-full text-sm bg-white border rounded z-50 hover:z-[9999]",
     id: "dropdown-listbox",
     role: "listbox"
   }, withSearch && /*#__PURE__*/_react.default.createElement("div", {
