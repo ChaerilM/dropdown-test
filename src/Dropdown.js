@@ -27,7 +27,7 @@ const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple =
     useEffect(() => {
         const searchQuery = search.trim().toLowerCase();
         setFilteredOptions(
-            options.filter(option => option.label.toLowerCase().includes(searchQuery))
+            options.filter(option => option.label && option.label.toLowerCase().includes(searchQuery))
         );
     }, [search, options]);
 
@@ -128,6 +128,7 @@ const Dropdown = ({ options = [], withSearch = true, outlined = true, multiple =
 };
 
 Dropdown.propTypes = {
+    
     options: PropTypes.array,
     withSearch: PropTypes.bool,
     outlined: PropTypes.bool,
